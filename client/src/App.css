@@ -1,7 +1,8 @@
 .App {
   min-height: 100vh;
-  background-color: rgb(238, 232, 232);
+  background-color: rgb(219, 206, 206);
   margin: 5px;
+  margin-bottom: 200px;
 }
 
 .mybody {
@@ -76,7 +77,7 @@ button.btn.btn-primary {
 
 .clipping-container {
   position: relative;
-  border: 1px solid #aaa;
+  border: 1px solid rgb(254, 254, 254);
   margin-bottom: 12px;
   padding: 12px;
   width: 250px;
@@ -97,4 +98,54 @@ button.btn.btn-primary {
   top: 70px;
   left: calc(50% - 125px);
   bottom: 70px;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-left: 20px;
 }

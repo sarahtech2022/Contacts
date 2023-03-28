@@ -1,4 +1,5 @@
-export default function ModalContent({ onClose }) {
+import React from "react";
+export default function ModalContent({onClose}) {
   return (
     <div className="modal">
       <div>I'm a modal dialog</div>

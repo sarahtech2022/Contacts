@@ -6,8 +6,8 @@ export default function Modal() {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <button onClick={() => setShowModal(true)}>
-        Show modal using a portal
+      < button onClick={() => setShowModal(true)}>
+        Expand for contact info
       </button>
       {showModal && createPortal(
         <ModalContent onClose={() => setShowModal(false)} />,
@@ -16,3 +16,6 @@ export default function Modal() {
     </>
   );
 }
+
+
+
