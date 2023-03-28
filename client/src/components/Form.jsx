@@ -7,6 +7,8 @@ const MyForm = ({ onSaveStudent, editingStudent, onUpdateStudent }) => {
     const [student, setStudent] = useState(editingStudent || {
         firstname: "",
         lastname: "",
+        phonenumber: "",
+        email: "",
         is_current: false
     });
 
@@ -20,6 +22,17 @@ const MyForm = ({ onSaveStudent, editingStudent, onUpdateStudent }) => {
     const handleLastnameChange = (event) => {
         const lastname = event.target.value;
         setStudent((student) => ({ ...student, lastname }));
+    };
+
+      const handlePhonenumberChange = (event) => {
+        const phonenumber = event.target.value;
+        setStudent((student) => ({ ...student, phonenumber }));
+    };
+
+
+      const handleEmailChange = (event) => {
+        const email = event.target.value;
+        setStudent((student) => ({ ...student, email }));
     };
 
     const handleCheckChange = (event) => {
@@ -101,6 +114,30 @@ const MyForm = ({ onSaveStudent, editingStudent, onUpdateStudent }) => {
                     required
                     value={student.lastname}
                     onChange={handleLastnameChange}
+                />
+
+                 </Form.Group>
+            <Form.Group>
+                <Form.Label>Phone Number</Form.Label>
+                <input
+                    type="text"
+                    id="add-user-phonenumber"
+                    placeholder="Phone Number"
+                    required
+                    value={student.phonenumber}
+                    onChange={handlePhonenumberChange}
+                />
+                 </Form.Group>
+
+                <Form.Group>
+                <Form.Label>Email</Form.Label>
+                <input
+                    type="text"
+                    id="add-user-email"
+                    placeholder="Email"
+                    required
+                    value={student.email}
+                    onChange={handleEmailChange}
                 />
             </Form.Group>
             <Form.Check

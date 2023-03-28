@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import * as ioicons from 'react-icons/io5'
 
-const Student = ({student, toUpdate, toDelete}) => {
+const Contact = ({student, toUpdate, toDelete}) => {
 
     const onUpdate = (toUpdateStudent) => {
         toUpdate(toUpdateStudent)
@@ -25,4 +25,4 @@ const Student = ({student, toUpdate, toDelete}) => {
 
 }
 
-export default Student;
+export default Contact;
