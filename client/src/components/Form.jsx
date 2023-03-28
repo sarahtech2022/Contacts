@@ -41,9 +41,9 @@ const MyForm = ({ onSaveStudent, editingStudent, onUpdateStudent }) => {
     //     setStudent((student) => ({ ...student, is_current }));
     // };
 
-    // const clearForm = () => {
-    //     setStudent({ firstname: "", lastname: "", is_current: false })
-    // }
+    const clearForm = () => {
+        setStudent({ firstname: "", lastname: "", phonenumber: "", email: "" })
+    }
 
     //A function to handle the post request
     const postStudent = (newStudent) => {
@@ -60,7 +60,7 @@ const MyForm = ({ onSaveStudent, editingStudent, onUpdateStudent }) => {
                 //I'm sending data to the List of Students (the parent) for updating the list
                 onSaveStudent(data);
                 //this line just for cleaning the form
-                // clearForm();
+                clearForm();
             });
     };
 
