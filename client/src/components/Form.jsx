@@ -35,15 +35,15 @@ const MyForm = ({ onSaveStudent, editingStudent, onUpdateStudent }) => {
         setStudent((student) => ({ ...student, email }));
     };
 
-    const handleCheckChange = (event) => {
-        const is_current = event.target.checked;
-        //console.log(iscurrent);
-        setStudent((student) => ({ ...student, is_current }));
-    };
+    // const handleCheckChange = (event) => {
+    //     const is_current = event.target.checked;
+    //     //console.log(iscurrent);
+    //     setStudent((student) => ({ ...student, is_current }));
+    // };
 
-    const clearForm = () => {
-        setStudent({ firstname: "", lastname: "", is_current: false })
-    }
+    // const clearForm = () => {
+    //     setStudent({ firstname: "", lastname: "", is_current: false })
+    // }
 
     //A function to handle the post request
     const postStudent = (newStudent) => {
@@ -60,7 +60,7 @@ const MyForm = ({ onSaveStudent, editingStudent, onUpdateStudent }) => {
                 //I'm sending data to the List of Students (the parent) for updating the list
                 onSaveStudent(data);
                 //this line just for cleaning the form
-                clearForm();
+                // clearForm();
             });
     };
 
@@ -140,13 +140,13 @@ const MyForm = ({ onSaveStudent, editingStudent, onUpdateStudent }) => {
                     onChange={handleEmailChange}
                 />
             </Form.Group>
-            <Form.Check
+            {/* <Form.Check
                 type={'checkbox'}
                 id={`isCurrent`}
                 checked={student.is_current}
                 onChange={handleCheckChange}
                 label={`Are they in the current program?`}
-            />
+            /> */}
             <Form.Group>
             <Button type="submit" variant="outline-success">{student.id ? "Edit Student" : "Add Student"}</Button>
             {student.id ? <Button type="button" variant="outline-warning" onClick={clearForm}>Cancel</Button> : null}
