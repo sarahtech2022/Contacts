@@ -4,7 +4,7 @@ const ModalContent = (props) => {
       {!props.show ? (
         <p>I'm the regual page</p>
       ) : (
-        <h1 className="modalcontent">{props.children}</h1>
+        <h5 className="modalcontent">{props.children}</h5>
       )}
     </div>
   );

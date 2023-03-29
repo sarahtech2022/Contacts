@@ -2,7 +2,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyNavBar from './components/Navbar'
 import ListContacts from './components/ListContacts'
-import Modal from './components/Modal';
+// import Modal from './components/Modal';
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <MyNavBar />
       <ListContacts />
-     <div className="clipping-container"> <Modal/></div> 
+     {/* <div className="clipping-container"> <Modal/></div>  */}
     </div>
   )
 }
