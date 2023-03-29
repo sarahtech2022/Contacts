@@ -1,21 +1,19 @@
-import { useState } from 'react';
-import { createPortal } from 'react-dom';
-import ModalContent from './ModalContent.jsx';
+import ModalContent from "./ModalContent";
+import { useState } from "react";
 
-export default function Modal() {
-  const [showModal, setShowModal] = useState(false);
+
+export default function Modal(props) {
+  const [show, setShow] = useState(false);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setShow(!show);
+  };
+
   return (
-    <>
-      < button onClick={() => setShowModal(true)}>
-        Expand for contact info
-      </button>
-      {showModal && createPortal(
-        <ModalContent onClose={() => setShowModal(false)} />,
-        document.body
-      )}
-    </>
+    <div>
+      <button onClick={handleClick}> Expand for contact info </button>
+      <ModalContent show={show} > {props.children} </ModalContent>
+    </div>
   );
 }
-
-
-

@@ -1,9 +1,13 @@
-import React from "react";
-export default function ModalContent({onClose}) {
+const ModalContent = (props) => {
   return (
-    <div className="modal">
-      <div>I'm a modal dialog</div>
-      <button onClick={onClose}>Close</button>
+    <div>
+      {!props.show ? (
+        <p>I'm the regual page</p>
+      ) : (
+        <h1 className="modalcontent">{props.children}</h1>
+      )}
     </div>
   );
-}
+};
+
+export default ModalContent;
