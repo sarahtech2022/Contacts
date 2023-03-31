@@ -22,7 +22,7 @@ const ListContacts = () => {
 
     useEffect(() => {
         loadStudents();
-    }, [students]);
+    }, []);
 
     const onSaveStudent = (newStudent) => {
         //console.log(newStudent, "From the parent - List of Students");
@@ -62,7 +62,7 @@ const ListContacts = () => {
     return (
         <div className="mybody">
         <div className="list-students">
-            <h2> Contacts: </h2>
+           
             <ul>
                 {students.map((student) => {
                     return <li key={student.id}> <Contact student={student} toDelete={onDelete} toUpdate={onUpdate} /></li>
