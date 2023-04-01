@@ -9,6 +9,9 @@ function App() {
   return (
     <div className="App">
       <span id="title"> Contacts: </span>
+      <img id="image" src="https://cdn-icons-png.flaticon.com/512/2343/2343694.png"></img>
+    
+      
       <ListContacts />
      {/* <div className="clipping-container"> <Modal/></div>  */}
     </div>
