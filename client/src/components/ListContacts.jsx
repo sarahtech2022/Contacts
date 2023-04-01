@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import * as ioicons from 'react-icons/io5'
 import MyForm from './Form';
-import Student from './Student';
+import Contact from './Contact';
 
-const ListStudents = () => {
+const ListContacts = () => {
 
     // this is my original state with an array of students 
     const [students, setStudents] = useState([]);
@@ -22,7 +22,7 @@ const ListStudents = () => {
 
     useEffect(() => {
         loadStudents();
-    }, [students]);
+    }, []);
 
     const onSaveStudent = (newStudent) => {
         //console.log(newStudent, "From the parent - List of Students");
@@ -62,10 +62,10 @@ const ListStudents = () => {
     return (
         <div className="mybody">
         <div className="list-students">
-            <h2>Techtonica Participants </h2>
+           
             <ul>
                 {students.map((student) => {
-                    return <li key={student.id}> <Student student={student} toDelete={onDelete} toUpdate={onUpdate} /></li>
+                    return <li key={student.id}> <Contact student={student} toDelete={onDelete} toUpdate={onUpdate} /></li>
                 })}
             </ul>
         </div>
@@ -75,4 +75,4 @@ const ListStudents = () => {
 }
 
 
-export default ListStudents
+export default ListContacts
